@@ -1,52 +1,188 @@
-## Quick Note
-### Coding language: React Native
-### Platform: Visual Studio Code
-### Wireframe:
-#### This is the login screen in which you have to enter your name to login.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.35.28%20PM.jpeg" width="200" height="400" />
+# Quick Note
 
-#### This is the main screen in which you will be able to see the greeting, good morning {name}. Here name is coming from login screen via Async Storage. You can also see the plus button through which you can add your notes.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.37.16%20PM.jpeg" width="200" height="400" />
+Quick Note is a simple and user-friendly note-taking application built with React Native and Expo. It allows users to create, edit, delete, search, and share notes while storing all data locally using AsyncStorage. The app is designed to provide a fast and lightweight note management experience without requiring an internet connection or user account.
 
-#### On press of the plus button of the main screen you can create a new note by entering the details and clicking on the tick button. You can also cancel the note by pressing the cross button.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.37.57%20PM.jpeg" width="200" height="400" />
+## Features
 
-#### The note will be seen on the screen. This is done by using Async Storage in the app.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.38.29%20PM.jpeg" width="200" height="400" />
+### Personalized Experience
+- Enter your name on first launch
+- Personalized greeting based on the time of day
+- User information stored locally using AsyncStorage
 
-#### You can see the details of the note on clicking on it. Here you will be able to see the date, Name of your note, Description of your note and some action buttons like Delete, Edit and Share.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.39.08%20PM.jpeg" width="200" height="400" />
+### Note Management
+- Create new notes with a title and description
+- View detailed note information
+- Edit existing notes
+- Delete notes with confirmation prompts
+- Automatically track creation and update timestamps
 
-#### You can share the note with others by clicking the share button.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.39.39%20PM.jpeg" width="200" height="400" />
+### Search Notes
+- Real-time note searching
+- Instant filtering based on note titles
+- Clear search functionality
 
-#### You can also edit the note again by clicking on button.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.40.16%20PM.jpeg" width="200" height="400" />
+### Share Notes
+- Share notes using the device's native sharing options
+- Easily send notes to messaging, email, or social media apps
 
-#### In additional, you will also be able to delete the note if you don't want by clicking on the delete button.
+### Local Data Persistence
+- Notes are stored locally using AsyncStorage
+- Data remains available even after closing the application
+- No internet connection required
 
-#### To search any note there is a live search bar.
-<img src="https://github.com/adityadangre/Quick-Note/blob/main/Quick%20note%20screenshot/WhatsApp%20Image%202021-09-10%20at%204.42.06%20PM.jpeg" width="200" height="400" />
+## Screens
 
-### The main thing in this app is the Async Storage. You can install the pacakage by: 
-      1)    "yarn add @react-native-async-storage/async-storage" 
-      OR
-      2)    "npm install @react-native-async-storage/async-storage".
+### Welcome Screen
+Users enter their name to personalize the application experience.
 
-### Libraries used to make this app: 
-      1)	@react-native-async-storage/async-storage
-      2)	@react-native-community/masked-view
-      3)	@react-navigation/native
-      4)	@react-navigation/stack
-      5)	react-native-gesture-handler
-      6)	react-native-reanimated
-      7)	react-native-screens
-      8)	react-native-share
-      9)	react-native-web
+### Home Screen
+Displays a greeting along with all saved notes. Users can create new notes using the floating action button.
 
-### You can see the code: [https://github.com/adityadangre/Quick-Note.git]
+### Create Note
+Add a new note by providing a title and description.
 
-### You can download the code: [https://drive.google.com/file/d/1XaCwSg3YT3apEIKxtM4J1yCXxLDPipns/view?usp=sharing]
+### Note Details
+View complete note information including:
+- Title
+- Description
+- Date and time
+- Edit option
+- Delete option
+- Share option
 
+### Search Notes
+Quickly find notes using the built-in search bar.
 
+## Tech Stack
 
+### Frontend
+- React Native
+- Expo
+
+### Navigation
+- React Navigation
+
+### Local Storage
+- AsyncStorage
+
+### State Management
+- React Context API
+- React Hooks
+
+## Libraries Used
+
+- @react-native-async-storage/async-storage
+- @react-native-community/masked-view
+- @react-navigation/native
+- @react-navigation/stack
+- react-native-gesture-handler
+- react-native-reanimated
+- react-native-safe-area-context
+- react-native-screens
+- react-native-share
+- react-native-web
+
+## Project Structure
+
+```text
+app/
+├── components/
+│   ├── Note.js
+│   ├── NoteDetail.js
+│   ├── NoteInputModal.js
+│   ├── NotFound.js
+│   ├── RoundIconBtn.js
+│   └── SearchBar.js
+│
+├── contexts/
+│   └── NoteProvider.js
+│
+├── screens/
+│   ├── Intro.js
+│   └── NoteScreen.js
+│
+└── misc/
+    └── colors.js
+```
+
+## Installation
+
+### Prerequisites
+
+- Node.js
+- npm
+- Expo CLI
+
+### Clone the Repository
+
+```bash
+git clone <repository-url>
+cd Quick-Note
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Application
+
+```bash
+npm start
+```
+
+or
+
+```bash
+expo start
+```
+
+### Run on Device
+
+- Install the Expo Go app on your Android or iOS device.
+- Scan the QR code generated by Expo.
+- The application will launch on your device.
+
+## How It Works
+
+1. Enter your name when launching the app for the first time.
+2. Create notes using the add button.
+3. Store notes locally using AsyncStorage.
+4. Search notes instantly using the search bar.
+5. Open any note to view details.
+6. Edit, delete, or share notes as needed.
+7. Access your notes anytime without an internet connection.
+
+## Learning Outcomes
+
+This project demonstrates:
+
+- React Native fundamentals
+- Component-based architecture
+- React Hooks
+- Context API for state management
+- Local data persistence with AsyncStorage
+- Mobile navigation using React Navigation
+- CRUD operations for note management
+- Native sharing functionality
+- Mobile UI/UX design principles
+
+## Future Enhancements
+
+- Categories and tags
+- Dark mode support
+- Rich text formatting
+- Pin important notes
+- Note backup and synchronization
+- Cloud storage integration
+- Voice notes
+- Note reminders and notifications
+
+## Screenshots
+
+Screenshots of the application can be found in the **Quick note screenshot** directory.
+
+## License
+
+This project was developed for learning and portfolio purposes. Feel free to use, modify, and extend it for educational or personal projects.
